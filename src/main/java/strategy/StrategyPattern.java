@@ -11,35 +11,4 @@ public class StrategyPattern {
         vendor.chooseFlavor(new Sprite());
         vendor.getBeverage();
     }
-
-    public interface Beverage{
-        void flavor();
-    }
-
-    public static class Cola implements Beverage{
-        @Override
-        public void flavor() {
-            System.out.println("This is Cola flavor");
-        }
-    }
-    public static class Sprite implements Beverage{
-        @Override
-        public void flavor() {
-            System.out.println("This is Sprite flavor");
-        }
-    }
-
-    public static class Vendor{
-        private Beverage beverage;
-
-        public void chooseFlavor(Beverage beverage){
-            this.beverage = beverage;
-        }
-
-        public void getBeverage(){
-            beverage.flavor();
-        }
-    }
-
-
 }
